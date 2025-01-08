@@ -1,7 +1,11 @@
 {
     "users": [
-      { "id": 1, "name": "John Doe", "email": "john@example.com" },
-      { "id": 2, "name": "Jane Smith", "email": "jane@example.com" }
+      { "id": 1, "name": "Alice", "email": "alice@example.com", "role": "Admin" },
+      { "id": 2, "name": "Bob", "email": "bob@example.com", "role": "User" }
+    ],
+    "products": [
+      { "id": 1, "name": "Laptop", "price": 1500, "category": "Electronics" },
+      { "id": 2, "name": "Chair", "price": 85, "category": "Furniture" }
     ]
   }
   
