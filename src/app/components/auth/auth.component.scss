@@ -1,22 +1,39 @@
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-  }
-  
-  input {
-    margin-bottom: 1rem;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #FFA500; /* Orange border */
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+button {
+  background-color: #FFA500; /* Orange button background */
+  color: #000; /* Black button text */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline {
+  color: #FFA500; /* Orange border */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline-thick {
+  border-color: #FFA500; /* Orange border */
+}

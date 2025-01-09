@@ -1,8 +1,72 @@
 mat-card {
-    margin: 20px;
-  }
-  
-  table {
-    width: 100%;
-  }
-  
+  margin: 20px;
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+table {
+  width: 100%;
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #FFA500; /* Orange border */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #333; /* Darker background for header */
+  color: #FFA500; /* Orange text */
+}
+
+.edit-button, .delete-button {
+  background-color: #FFA500; /* Orange button background */
+  color: #000; /* Black button text */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.edit-button:hover, .delete-button:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline {
+  color: #FFA500; /* Orange border */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline-thick {
+  border-color: #FFA500; /* Orange border */
+}
+
+body {
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+input {
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+  border: 1px solid #FFA500; /* Orange border */
+}
+
+button {
+  background-color: #FFA500; /* Orange button background */
+  color: #000; /* Black button text */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { CommonModule } from '@angular/common'; // Import CommonModule for *ngFor
+import { CommonModule } from '@angular/common';
+import { UserService } from '../../services/user.service'; // Ensure this path is correct
 
 @Component({
   selector: 'app-users',
@@ -10,23 +10,40 @@ import { CommonModule } from '@angular/common'; // Import CommonModule for *ngFo
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  users: any[] = [];
+  users: { id: number; name: string; email: string }[] = [];
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userService.getUsers().subscribe((data) => (this.users = data));
+    this.loadUsers();
   }
 
-  editUser(user: any) {
+  loadUsers(): void {
+    this.userService.getUsers().subscribe(
+      (data: { id: number; name: string; email: string }[]) => {
+        console.log('Users loaded:', data); // Debugging statement
+        this.users = data;
+      },
+      (error) => {
+        console.error('Error loading users:', error);
+      }
+    );
+  }
+
+  editUser(user: { id: number; name: string; email: string }) {
     console.log('Editing user:', user);
     // Add logic to handle editing
   }
 
-  deleteUser(userId: number) {
+  deleteUser(userId: number): void {
     console.log('Deleting user with ID:', userId);
-    this.userService.deleteUser(userId).subscribe(() => {
-      this.users = this.users.filter((user) => user.id !== userId);
-    });
+    this.userService.deleteUser(userId).subscribe(
+      () => {
+        this.users = this.users.filter((user) => user.id !== userId);
+      },
+      (error) => {
+        console.error('Error deleting user:', error);
+      }
+    );
   }
 }

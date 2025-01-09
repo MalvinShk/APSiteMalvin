@@ -1,19 +1,42 @@
-<table mat-table [dataSource]="products" class="mat-elevation-z8">
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let product"> {{ product.name }} </td>
-  </ng-container>
+<div class="product-container">
+  <h1>Product List</h1>
 
-  <!-- Price Column -->
-  <ng-container matColumnDef="price">
-    <th mat-header-cell *matHeaderCellDef> Price </th>
-    <td mat-cell *matCellDef="let product"> {{ product.price }} </td>
-  </ng-container>
+  <!-- Add Product Form -->
+  <form class="add-product-form" (ngSubmit)="addProduct()">
+    <mat-form-field appearance="fill">
+      <mat-label>Product Name</mat-label>
+      <input matInput [(ngModel)]="newProduct.name" name="productName" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput type="number" [(ngModel)]="newProduct.price" name="productPrice" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form>
 
-  <!-- Header Row -->
-  <tr mat-header-row *matHeaderRowDef="['name', 'price']"></tr>
+  <!-- Product Table -->
+  <table mat-table [dataSource]="products" class="mat-elevation-z8">
+    <!-- Product Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let product"> {{ product.name }} </td>
+    </ng-container>
 
-  <!-- Data Rows -->
-  <tr mat-row *matRowDef="let row; columns: ['name', 'price'];"></tr>
-</table>
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let product"> {{ product.price }} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let product">
+        <button mat-button color="warn" (click)="deleteProduct(product.id)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name', 'price', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'price', 'actions'];"></tr>
+  </table>
+</div>

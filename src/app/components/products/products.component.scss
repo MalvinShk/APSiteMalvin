@@ -1,8 +1,61 @@
-mat-card {
-    margin: 20px;
-  }
-  
-  table {
-    width: 100%;
-  }
-  
+.product-container {
+  max-width: 800px;
+  margin: auto;
+  color: #FFA500; /* Orange text */
+}
+
+.add-product-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  flex: 1;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #000; /* Black background */
+  color: #FFFFFF; /* White text */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline {
+  color: #FFA500; /* Orange border */
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-outline-thick {
+  border-color: #FFA500; /* Orange border */
+}
+
+input {
+  background-color: #ffffff; /* Black background */
+  color: #FFFFFF; /* White text */
+  border: 1px solid #ffffff; /* Orange border */
+}
+
+button {
+  background-color: #FFA500; /* Orange button background */
+  color: #000; /* Black button text */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}
+
+table {
+  width: 100%;
+  background-color: #000; /* Black background */
+  color: #FFA500; /* Orange text */
+}
+
+th, td {
+  border: 1px solid #FFA500; /* Orange border */
+}
+
+th {
+  background-color: #333; /* Darker background for header */
+}
