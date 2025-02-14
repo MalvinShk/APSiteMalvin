@@ -1,11 +1,100 @@
 {
-    "users": [
-      { "id": 1, "name": "Alice", "email": "alice@example.com", "role": "Admin" },
-      { "id": 2, "name": "Bob", "email": "bob@example.com", "role": "User" }
-    ],
-    "products": [
-      { "id": 1, "name": "Laptop", "price": 1500, "category": "Electronics" },
-      { "id": 2, "name": "Chair", "price": 85, "category": "Furniture" }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "name": "Juliet Oma",
+      "email": "julie@yahoo.com",
+      "number": "08100000000",
+      "role": "admin",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "James Williams",
+      "email": "jameswilly@gmail.com",
+      "number": "08111111111",
+      "role": "customer",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Ali",
+      "email": "ahmedali012@gmail.com",
+      "number": "09022222222",
+      "role": "customer",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "name": "Grace Funsho",
+      "email": "gracefunsho@gmail.com",
+      "number": "09033333333",
+      "role": "customer",
+      "password": "123"
+    },
+    {
+      "id": "f7e7",
+      "name": "adads",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": "adad"
+    },
+    {
+      "name": "UPDATED USER",
+      "email": "",
+      "number": "UPDATED USER",
+      "role": "UPDATED USER",
+      "password": "UPDATED USER",
+      "id": "e9e0"
+    },
+    {
+      "id": "a2b2",
+      "name": "adad",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": "dadad"
+    },
+    {
+      "id": "db90",
+      "name": "adad",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": "adads"
+    },
+    {
+      "name": "UPDATED USER",
+      "email": "UPDATED@email.lol",
+      "number": "UPDATED USER",
+      "role": "UPDATED USER",
+      "password": "UPDATED USER",
+      "id": "6af4"
+    },
+    {
+      "id": "6a67",
+      "name": "asdads",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": null
+    },
+    {
+      "id": "414a",
+      "name": "123123",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": null
+    },
+    {
+      "id": "e7fd",
+      "name": "123",
+      "email": "",
+      "number": "",
+      "role": "",
+      "password": null
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+
+/* .content{
+
+
+} */
+
+ nav{
+  background-color: skyblue;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+ }
+
+.links {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Adding space around items */
+  gap: 10px;
+  flex-direction: column;
+}
+
+.content {
+  background-color: white;
+  display: flex;
+  column-count: 2;
+} 
+
+.app-list{
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* background-color: violet; */
+  grid-template-columns: 33% 33% 33%;
+  display: grid;
+}
+
+.user-card{
+
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+      /* .list-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      
+      .centered-div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 100px; 
+        background-color: #f0f0f0;
+        text-align: center;
+        line-height: 100px; 
+      } */
